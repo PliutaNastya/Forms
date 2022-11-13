@@ -679,25 +679,6 @@ h6 {
   background: #cce4ff;
 }
 
-[class*=-ibg] {
-  position: relative;
-}
-
-[class*=-ibg] img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-[class*=-ibg_contain] img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -1014,6 +995,12 @@ h6 {
 .item-footer__disclaimer {
   font-size: 16px;
   line-height: 1.3;
+}
+
+.social__link_svg:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .menu-footer {
@@ -1416,25 +1403,13 @@ h6 {
 
 .form-5 {
   margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .form-5__card-number {
   max-width: 100%;
   width: 432px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .form-5__label {
@@ -1465,8 +1440,11 @@ h6 {
 }
 
 .form-5__card-date {
+  margin-top: 15px;
   max-width: 100%;
   width: 432px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .form-5__notes {
@@ -1475,7 +1453,10 @@ h6 {
   letter-spacing: 0.02em;
   color: #5A5A5A;
   width: 432px;
+  margin-top: 10px;
   max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .form-5__buttons {
@@ -1488,6 +1469,7 @@ h6 {
 }
 
 .form-5__button {
+  width: 432px;
   max-width: 100%;
 }
 
@@ -2693,10 +2675,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 7.75rem;
   }
 
-  .form-5__button {
-    width: 26.8125rem;
-  }
-
   .text-block-reviews__title {
     font-size: 2.5rem;
   }
@@ -3019,10 +2997,6 @@ button.swiper-pagination-bullet {
     margin-bottom: 5rem;
   }
 
-  .form-5__button {
-    width: 18.125rem;
-  }
-
   .text-block-reviews__title {
     font-size: 1.5rem;
   }
@@ -3212,6 +3186,18 @@ button.swiper-pagination-bullet {
 @media (max-width: 47.99875em) and (max-width: 47.99875em) {
   .menu__body::before {
     height: 90px;
+  }
+}
+
+@media (max-width: 47.99875em) and (max-width: 28.75em) {
+  .menu__body::before {
+    height: 80px;
+  }
+}
+
+@media (max-width: 47.99875em) and (max-width: 21.875em) {
+  .menu__body::before {
+    height: 75px;
   }
 }
 
@@ -4144,18 +4130,6 @@ button.swiper-pagination-bullet {
 @supports not (margin-bottom: clamp( 5rem , 4.032967033rem  +  4.8351648352vw , 7.75rem )) {
     .form-5__buttons {
       margin-bottom: calc(5rem + 2.75 * (100vw - 20rem) / 56.875);
-    }
-}
-
-@supports (width: clamp( 18.125rem , 15.0700549451rem  +  15.2747252747vw , 26.8125rem )) {
-    .form-5__button {
-      width: clamp( 18.125rem , 15.0700549451rem  +  15.2747252747vw , 26.8125rem );
-    }
-}
-
-@supports not (width: clamp( 18.125rem , 15.0700549451rem  +  15.2747252747vw , 26.8125rem )) {
-    .form-5__button {
-      width: calc(18.125rem + 8.6875 * (100vw - 20rem) / 56.875);
     }
 }
 
